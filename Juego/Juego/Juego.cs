@@ -2,11 +2,32 @@
 
 namespace Juego
 {
-    internal class Program
+    internal class Juego
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int NumParticipantes, NumAleatorio, NumJugador;
+
+            PedirDatos();
+            ProcJuego();
+            MostrarResultado();
+
+        }
+
+        static void PedirDatos()
+        {
+
+        }
+
+        static void ProcJuego()
+        {
+
+        }
+
+        static void MostrarResultado()
+        {
+
         }
     }
+
 }
