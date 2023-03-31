@@ -53,7 +53,7 @@ namespace Juego
                     break;
             }
 
-            NumAleatorio = random.Next(max + 1);
+            NumAleatorio = Random.Next(max + 1);
 
             Console.Write("EL número secreto se generó y es : ");
             NumAleatorio = Convert.ToInt32(Console.ReadLine());
@@ -65,11 +65,28 @@ namespace Juego
             {
                 Console.Write($"\n Jugador ,juego, Digite un número entre 0 y ,max  : ");
                 int star = Convert.ToInt32(Console.ReadLine());
+
+                if ( star > NumAleatorio)
+                {
+                    Console.WriteLine("Es Menor");
+                    juego = (juego % Numjugador) + 1;
+                }
+                else if  ( star < NumAleatorio)
+                {
+                    Console.WriteLine("Es Mayor");
+                    juego = (juego % Numjugador) + 1;
+                }
+                
+                else
+                    Console.Write($"Has ganado", Numjugador);
+                { 
+                juego++;
+                    Juegos = true;
+                }
+
+
             }
-        }
-            
-            
-        }
+ }
 
         static void MostrarResultado()
         {
