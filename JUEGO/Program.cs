@@ -53,7 +53,7 @@ namespace JUEGO
 
                     while (!ganador)
                     {
-                        Console.Write($"Jugador {jugador1}, ingrese un número entre 1 y {numMaxopt}: ");
+                        Console.Write($"Jugador {jugador1}, ingrese un número entre 0 y {numMaxopt}: ");
                         int numeroIngresado = int.Parse(Console.ReadLine());
 
                         if (numeroIngresado < numcorrecto)
