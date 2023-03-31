@@ -9,7 +9,7 @@ namespace Juego
 
         static void Main(string[] args)
         {
-            int players, player1, player2, player3, player4, numAleator50, swth=1;
+            int players, player1, player2, player3, player4, numAleator50, swth = 1, numAleator100;
             Random aleator= new Random();
 
             
@@ -24,18 +24,18 @@ namespace Juego
             
             players=Convert.ToInt32(Console.ReadLine());
 
-           
 
-            switch (players) 
+
+            switch (players)
             {
                 case 1:
                     numAleator50 = aleator.Next(0, 50);
                     while (swth == 1)
                     {
-                       
-                        Console.WriteLine("\n    Jugador 1 su Numero Por Favor \n");
+
+                        Console.WriteLine("\n    Jugador 1 su Numero del 0 al 50 Por Favor \n");
                         player1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("\n    Jugador 2 su Numero Por Favor \n");
+                        Console.WriteLine("\n    Jugador 2 su Numero del 0 al 50 Por Favor \n");
                         player2 = Convert.ToInt32(Console.ReadLine());
 
                         if (player1 == numAleator50) Console.WriteLine("   JUGADOR 1 HAZ GANADO");
@@ -46,21 +46,42 @@ namespace Juego
                         if (player2 > numAleator50) Console.WriteLine("    JUGADOR 2 ES MAS ABAJO");
 
                         Console.WriteLine(" para ingresar un nuevo numero marque 1 o cualquier otro para salir");
-                        swth=Convert.ToInt32(Console.ReadLine());
-                       Console.Clear();
+                        swth = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+
+
+                    }
+                    break;
+                case 2:
+                    numAleator100 = aleator.Next(0, 100);
+                    while (swth == 1)
+                    {
+
+                        Console.WriteLine("\n    Jugador 1 su Numero del 0 al 100 Por Favor \n");
+                        player1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("\n    Jugador 2 su Numero del 0 al 100 Por Favor \n");
+                        player2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("\n    Jugador 3 su Numero del 0 al 100 Por Favor \n");
+                        player3 = Convert.ToInt32(Console.ReadLine());
+                        if (player1 == numAleator100) Console.WriteLine("   JUGADOR 1 HAZ GANADO");
+                        if (player2 == numAleator100) Console.WriteLine("   JUGADOR 2 HAZ GANADO");
+                        if (player3 == numAleator100) Console.WriteLine("   JUGADOR 2 HAZ GANADO");
+                        if (player1 < numAleator100) Console.WriteLine("    JUGADOR 1 ES MAS ARRIBA");
+                        if (player1 > numAleator100) Console.WriteLine("    JUGADOR 1 ES MAS ABAJO");
+                        if (player2 < numAleator100) Console.WriteLine("    JUGADOR 2 ES MAS ARRIBA");
+                        if (player2 > numAleator100) Console.WriteLine("    JUGADOR 2 ES MAS ABAJO");
+                        if (player3 < numAleator100) Console.WriteLine("    JUGADOR 3 ES MAS ARRIBA");
+                        if (player3 > numAleator100) Console.WriteLine("    JUGADOR 3 ES MAS ABAJO");
+
+                        Console.WriteLine(" para ingresar un nuevo numero marque 1 o cualquier otro para salir");
+                        swth = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
 
 
                     }
                     break;
 
-
-                    
-
-                    
             }
-
-
-
         }
     }
 }
