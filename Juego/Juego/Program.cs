@@ -6,12 +6,17 @@ namespace Juego
     {
         static void Main(string[] args)
         {
-            Random random= new Random();
+            Random random = new Random();
 
             int players, nummin = 0, nummax = 0;
+            int secretnum = random.Next(nummin, nummax);
+            int turnplayer = 1;
 
-            Console.WriteLine("Ingrese el número de jugadores: Minimo 2 - Máximo 4");
-            players= Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                Console.WriteLine("Ingrese el número de jugadores: Minimo 2 - Máximo 4");
+                players = Convert.ToInt32(Console.ReadLine());
+            } while (players < 2 || players> 4);
 
             switch (players)
             {
@@ -28,7 +33,30 @@ namespace Juego
 
             }
 
-            int secretnum = random.Next(nummin, nummax);
+            while (true)
+            {
+                Console.WriteLine($"Turno jugador {turnplayer}, ingrese un número entre {nummin} y {nummax}");
+                int chance = Convert.ToInt32(Console.ReadLine());
+
+                if (chance < secretnum)
+                {
+                    Console.Write("MAYOR");
+                    turnplayer = (turnplayer % players) + 1;
+                }
+                else if (chance > secretnum)
+                {
+                    Console.Write("MENOR");
+                    turnplayer = (turnplayer % players) + 1;
+                }
+                else
+                {
+                    Console.Write("¡HAS GANADO!");
+                    break;
+                }
+            }
+
+            Console.Write("\nDigite 'y' para intentarlo nuevamente o 'n' para finalizar: ");
+            string newplay = Console.ReadLine();
         }
     }
 }
