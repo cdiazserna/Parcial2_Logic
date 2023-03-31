@@ -50,7 +50,37 @@ namespace JUEGO
 
                     bool ganador = false;
                     int jugador1 = 1;
+
+                    while (!ganador)
+                    {
+                        Console.Write($"Jugador {jugador1}, ingrese un número entre 1 y {numMaxopt}: ");
+                        int numeroIngresado = int.Parse(Console.ReadLine());
+
+                        if (numeroIngresado < numcorrecto)
+                        {
+                            Console.WriteLine("MAYOR");
+                        }
+                        else if (numeroIngresado > numcorrecto)
+                        {
+                            Console.WriteLine("MENOR");
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡HAS GANADO!");
+                            ganador = true;
+                        }
+
+                        if (!ganador)
+                        {
+                            jugador1++;
+                            if (jugador1 > numjugadores)
+                            {
+                                jugador1 = 1;
+                            }
+                        }
+                    }
                 }
+
 
 
 
