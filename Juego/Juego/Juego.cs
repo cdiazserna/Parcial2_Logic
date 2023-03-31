@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.SymbolStore;
 using System.Security.Cryptography;
 
 namespace Juego
@@ -8,61 +10,73 @@ namespace Juego
         static void Main(string[] args)
         {
             int NumAleatorio, NumJugador;
-            decimal randomNumber, min, max;
-            int i;
+            bool EmJuego = true;
+            decimal randomNumber;
 
             //Clase Random
             Random random = new Random();
             randomNumber = random.Next(min, max);
 
-
-
-            PedirDatos(out NumJugador, out NumAleatorio);
+            PedirDatos(out NumJugador);
             ProcJuego(out NumJugador, out NumAleatorio);
             MostrarResultado();
 
 
         }
 
-        static public void PedirDatos(out int Numjugador, out int NumAleatorio)
+        static public void PedirDatos(out int Numjugador)
+        {
+            Console.Write("Por favor ingrese el número de jugadores entre 2 y 4: ");
+            Numjugador = Convert.ToInt32(Console.ReadLine());
+        }
+
+        static public void ProcJuego(out int Numjugador, out decimal NumAleatorio, out Random max)
+
         {
             Console.Write("Por favor ingrese el número de jugadores entre 2 y 4: ");
             Numjugador = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Ingrese un número: ");
-            NumAleatorio = Convert.ToInt32(Console.ReadLine());
-        }
+            int max = 0;
 
-        static public void ProcJuego(out int Numjugador, out int NumAleatorio, out int i)
-
-        {
-            while (Numjugador < 2 || Numjugador > 4)
+            switch (Numjugador)
             {
-                Console.Write("Por favor ingrese el número de jugadores entre 2 y 4: ");
-                Numjugador = Convert.ToInt32(Console.ReadLine());
+                case 0:
+                    max = 50;
+                    break;
 
-                if (Numjugador == 2)
-                {
-                    i = NumAleatorio(0, 50);
-                }
-                else if (Numjugador == 3)
+                case 1:
+                    max = 100;
+                    break;
 
-                {
-                    i = numAleatorio(0, 100);
-                }
-                else if (Numjugador == 4)
-                {
-                    i = NumAleatorio(0, 200);
-                    }
+                case 2:
+                    max = 200;
+                    break;
+            }
+
+            NumAleatorio = random.Next(max + 1);
+
+            Console.Write("EL número secreto se generó y es : ");
+            NumAleatorio = Convert.ToInt32(Console.ReadLine());
+
+            bool Juegos = false;
+            int juego = 1;
+
+            while (Juegos)
+            {
+                Console.Write($"\n Jugador ,juego, Digite un número entre 0 y ,max  : ");
+                int star = Convert.ToInt32(Console.ReadLine());
             }
         }
-    }
-}
+            
+            
+        }
 
         static void MostrarResultado()
         {
 
         }
     }
-
 }
+
+        
+   
