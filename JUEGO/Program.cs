@@ -11,8 +11,7 @@ namespace JUEGO
             Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
 
-            int numMaxopt, intentospermitidos, intentos, numrandom, numjugadores;
-            bool ganador;
+            int numMaxopt=0, intentospermitidos, intentos, numrandom, numjugadores;        
             int menu = 1;
 
             while (menu==1)
@@ -37,8 +36,23 @@ namespace JUEGO
                     default:
                         Console.WriteLine("Elija una cantidad de jugadores válida");
                         break;
-
+               
                 }
+                Console.Clear();
+
+                if (numMaxopt != 0)
+                {
+                    Random rnd = new Random();
+                    int numcorrecto = rnd.Next(0, numMaxopt + 1);
+                    Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                    Console.WriteLine("El juego ha comenzado");
+                    Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+                    bool ganador = false;
+                    int jugador1 = 1;
+                }
+
+
 
             }
             
