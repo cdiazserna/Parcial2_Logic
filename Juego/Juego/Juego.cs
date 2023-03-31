@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.SymbolStore;
-using System.Security.Cryptography;
 
 namespace Juego
 {
@@ -18,7 +15,7 @@ namespace Juego
             randomNumber = random.Next(min, max);
 
             PedirDatos(out NumJugador);
-            ProcJuego(out NumJugador, out NumAleatorio);
+            ProcJuego(out NumJugador, out NumAleatorio, out max);
             MostrarResultado();
 
 
@@ -30,7 +27,7 @@ namespace Juego
             Numjugador = Convert.ToInt32(Console.ReadLine());
         }
 
-        static public void ProcJuego(out int Numjugador, out decimal NumAleatorio, out Random max)
+        static public void ProcJuego(out int Numjugador, out decimal NumAleatorio, out int max)
 
         {
             Console.Write("Por favor ingrese el número de jugadores entre 2 y 4: ");
@@ -83,10 +80,18 @@ namespace Juego
                 juego++;
                     Juegos = true;
                 }
-
-
             }
- }
+
+            Console.WriteLine("¿Desea empezar un juego nuevo?");
+            string pregunta = Console.ReadLine();
+
+            if (pregunta.ToLower() == "true")
+            {
+                NumAleatorio = false;
+            }
+
+            Console.WriteLine("Gracias");
+        }
 
         static void MostrarResultado()
         {
