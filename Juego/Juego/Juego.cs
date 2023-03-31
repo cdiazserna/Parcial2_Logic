@@ -9,6 +9,7 @@ namespace Juego
             int NumAleatorio, NumJugador;
             bool EmJuego = true;
             decimal randomNumber;
+            string pregun;
 
             //Clase Random
             Random random = new Random();
@@ -17,7 +18,7 @@ namespace Juego
 
             PedirDatos(out NumJugador);
             ProcJuego(out NumJugador, out NumAleatorio, out max);
-            MostrarResultado();
+            MostrarResultado(out NumAleatorio, out pregun);
 
 
         }
@@ -83,19 +84,19 @@ namespace Juego
                 }
             }
 
-            Console.WriteLine("¿Desea empezar un juego nuevo?");
-            string pregunta = Console.ReadLine();
+        }
 
-            if (pregunta.ToLower() == "true")
+        static void MostrarResultado(out int NumAleatorio, out string pregun)
+        {
+            Console.WriteLine("¿Desea empezar un juego nuevo?");
+            string pregun = Console.ReadLine();
+
+            if (pregun.ToLower() == "true")
             {
                 NumAleatorio = false;
             }
 
             Console.WriteLine("Gracias");
-        }
-
-        static void MostrarResultado()
-        {
 
         }
     }
