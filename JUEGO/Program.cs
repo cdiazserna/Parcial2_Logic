@@ -58,15 +58,15 @@ namespace JUEGO
 
                         if (numeroIngresado < numcorrecto)
                         {
-                            Console.WriteLine("MAYOR");
+                            Console.WriteLine("ES MAYOR");
                         }
                         else if (numeroIngresado > numcorrecto)
                         {
-                            Console.WriteLine("MENOR");
+                            Console.WriteLine("ES MENOR");
                         }
                         else
                         {
-                            Console.WriteLine("¡HAS GANADO!");
+                            Console.WriteLine("GANASTE :D");
                             ganador = true;
                         }
 
@@ -82,10 +82,13 @@ namespace JUEGO
                 }
 
 
-
-
+                Console.WriteLine("Desea jugar nuevamente?");
+                Console.WriteLine("Presione 1 para volver a jugar o 0 para salir del juego");
+                menu = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
             }
             
+
         }
         
     }
