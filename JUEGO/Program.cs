@@ -25,7 +25,19 @@ namespace JUEGO
                 
                 switch (numjugadores)
                 {
-                    case 1
+                    case 2:
+                        numMaxopt = 50;
+                        break;
+                    case 3:
+                        numMaxopt = 100;
+                        break;
+                    case 4:
+                        numMaxopt = 200;
+                        break;
+                    default:
+                        Console.WriteLine("Elija una cantidad de jugadores válida");
+                        break;
+
                 }
 
             }
