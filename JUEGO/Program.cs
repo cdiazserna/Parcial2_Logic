@@ -25,7 +25,7 @@ namespace JUEGO
                 
                 switch (numjugadores)
                 {
-
+                    case 1
                 }
 
             }
