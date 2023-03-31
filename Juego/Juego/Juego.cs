@@ -12,7 +12,8 @@ namespace Juego
 
             //Clase Random
             Random random = new Random();
-            randomNumber = random.Next(min, max);
+            randomNumber = random.Next(min, max1);
+            int max = 0, min;
 
             PedirDatos(out NumJugador);
             ProcJuego(out NumJugador, out NumAleatorio, out max);
@@ -60,7 +61,7 @@ namespace Juego
 
             while (Juegos)
             {
-                Console.Write($"\n Jugador ,juego, Digite un número entre 0 y ,max  : ");
+                Console.Write($"\n Jugador Digite un número entre 0 y  : ", juego, max);
                 int star = Convert.ToInt32(Console.ReadLine());
 
                 if ( star > NumAleatorio)
