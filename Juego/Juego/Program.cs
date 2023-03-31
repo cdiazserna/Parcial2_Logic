@@ -6,7 +6,8 @@ namespace Juego
     {
         static void Main(string[] args)
         {
-            int players = PedirDatos("Ingrese el número de jugadores (entre 2 y 4): ", 2, 4);
+
+            int players = Askdata("Ingrese el número de jugadores (entre 2 y 4): ", 2, 4);
             int nummin = 0, numax = 0;
             switch (players)
             {
@@ -22,13 +23,13 @@ namespace Juego
             }
             int secretNum = CalcularDatos(nummin, numax);
             MostrarResultado(secretNum, players, nummin, numax);
-            if (PedirDatos("¿Desea jugar de nuevo? (s/n): ", "s", "n") == "s")
+            if (Askdata ("¿Desea jugar de nuevo? (s/n): ") == "s")
             {
                 Main();
             }
         }
 
-        static int PedirDatos(string mensaje, int min, int max)
+        static int Askdata(string mensaje, int min, int max)
         {
             int dato;
             do
