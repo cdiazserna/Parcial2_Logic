@@ -1,0 +1,14 @@
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.exe
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.deps.json
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.runtimeconfig.json
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.runtimeconfig.dev.json
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.dll
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\bin\Debug\netcoreapp3.1\ResolucionParcial2.pdb
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.csproj.AssemblyReference.cache
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.GeneratedMSBuildEditorConfig.editorconfig
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.AssemblyInfoInputs.cache
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.AssemblyInfo.cs
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.csproj.CoreCompileInputs.cache
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.dll
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.pdb
+C:\ITMRepos\Logic\ResolucionParcial2\ResolucionParcial2\obj\Debug\netcoreapp3.1\ResolucionParcial2.genruntimeconfig.cache
